@@ -1,0 +1,90 @@
+/* TODO: add vendor prefixes */
+
+@import url('./styles/toggle.css');
+@import url('./styles/keypad.css');
+@import url('./styles/display.css');
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --white: #fff; /* top section light */
+  --alto: #dedede;
+  --concrete: #f3f3f3;
+  --sand: #f7f7f7;
+  --alabaster: #f9f9f9; /* bottom section light */
+  --stone: #787a7f;
+  --charade: #2a2d36; /* bottom section dark */
+  --shark-tint: #272b33;
+  --shark: #22252d; /* top section dark */
+  --sunglo: #e66565;
+  --turquoise: #26f6d1;
+
+  --body-bg: var(--concrete);
+  --app-bg: var(--white);
+  --number-text-color: var(--shark);
+  --mode-icon-color-on: var(--alto);
+  --mode-icon-color-off: var(--charade);
+  --mode-container: var(--alabaster);
+
+  --keypad-bg: var(--alabaster);
+  --button-bg: var(--sand);
+
+  --border-radius-app: 1.5rem;
+  --border-radius-container: 1rem;
+  --background-transition: background-color 200ms linear;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--body-bg);
+  color: var(--number-text-color);
+}
+
+.dark_mode {
+  --app-bg: var(--shark);
+  --mode-icon-color-on: var(--white);
+  --mode-icon-color-off: var(--stone);
+  --number-text-color: var(--white);
+  --mode-container: var(--charade);
+  --keypad-bg: var(--charade);
+  --button-bg: var(--shark-tint);
+}
+
+#app {
+  border-radius: var(--border-radius-app);
+  background-color: var(--app-bg);
+  margin: 0 auto;
+  transition: var(--background-transition);
+}
+
+.visually-hidden {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.app-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+svg {
+  pointer-events: none;
+}

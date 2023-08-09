@@ -1,0 +1,52 @@
+.keypad-container {
+  width: 100%;
+  padding: 0.5rem 0;
+  background-color: var(--keypad-bg);
+  border-radius: var(--border-radius-app);
+}
+
+.keypad-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 50px);
+  grid-template-rows: minmax(50px, auto) repeat(4, 50px);
+  grid-gap: 1rem;
+  padding: 1rem 0;
+}
+
+.keypad-button {
+  all: unset;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius-container);
+  background-color: var(--button-bg);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.keypad-button-action {
+  color: var(--turquoise);
+}
+
+.keypad-button-operator {
+  color: var(--sunglo);
+}
+
+.keypad-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.keypad-icon_operator {
+  color: var(--sunglo);
+}
+
+.keypad-icon_action-larger {
+  width: 1.8rem;
+  height: 1.8rem;
+}

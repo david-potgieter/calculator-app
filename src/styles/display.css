@@ -1,0 +1,38 @@
+.display-container {
+  width: 290px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 1rem;
+}
+
+.display-history-container {
+  font-size: 1.5rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display-history-operator {
+  margin: 3px 0 0 3px;
+  width: 2rem;
+  height: 2rem;
+  color: var(--sunglo);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display-history-value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display-result-container {
+  font-size: 3rem;
+  font-weight: 700;
+}
