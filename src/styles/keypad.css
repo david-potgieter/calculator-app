@@ -3,6 +3,7 @@
   padding: 0.5rem 0;
   background-color: var(--keypad-bg);
   border-radius: var(--border-radius-app);
+  transition: var(--background-transition);
 }
 
 .keypad-grid {
@@ -25,8 +26,13 @@
   align-items: center;
   border-radius: var(--border-radius-container);
   background-color: var(--button-bg);
+  transition: var(--background-transition);
   font-weight: 700;
   font-size: 1.2rem;
+}
+
+.keypad-button-placeholder {
+  background-color: transparent;
 }
 
 .keypad-button-action {

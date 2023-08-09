@@ -2,7 +2,7 @@ export const moonHTML = `
 <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
-    class="app-icon app-icon-mode_on"
+    class="toggle-icon toggle-icon-mode_on"
     viewBox="0 0 24 24"
     stroke-width="1.5"
     stroke="currentColor">

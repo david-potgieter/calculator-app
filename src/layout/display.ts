@@ -12,7 +12,3 @@ export const displayHTML = `
     </div>
 </div>
 `
-
-export function setupDisplay() {
-  console.log('display')
-}
