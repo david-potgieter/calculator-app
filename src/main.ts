@@ -1,4 +1,9 @@
 import {
+  setupKeyboardActions,
+  setupKeyboardDigits,
+  setupKeyboardOperations,
+} from './functions/setup-keyboard'
+import {
   setupActions,
   setupDigits,
   setupOperations,
@@ -14,6 +19,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     ${displayHTML}
     ${keyPadHTML}
 `
+setupKeyboardDigits(document)
+setupKeyboardActions(document)
+setupKeyboardOperations(document)
 setupToggleMode(document.querySelectorAll('[data-toggle]')!)
 setupDigits(document.querySelectorAll('[data-digit]')!)
 setupActions(document.querySelectorAll('[data-action]')!)
