@@ -1,36 +1,48 @@
-export function setupKeyboardDigits(document: Document) {
-  document.addEventListener('keydown', (event: KeyboardEvent) => {
-    if (
-      event.code.includes('Digit') ||
-      event.code.includes('Numpad') ||
-      event.code.includes('Period')
-    ) {
-      console.log(event.key, event.code)
-    }
-  })
-}
+import { ICalculator, OPERATION_ACTIONS } from '../types/app-types'
+import { onlyDigits } from './calculator/helpers/only-digits'
+import { selectOperator } from './calculator/helpers/which-operator'
 
-export function setupKeyboardActions(document: Document) {
+export function setupKeyboard(document: Document, calculator: ICalculator) {
   const allowedActions = ['Delete', 'Backspace']
-  document.addEventListener('keydown', (event: KeyboardEvent) => {
-    if (allowedActions.includes(event.code)) {
-      console.log(event.key, event.code)
-    }
-  })
-}
-
-export function setupKeyboardOperations(document: Document) {
-  const allowedActions = [
-    'Equal',
+  const equalOperators = [
     'Enter',
-    'Minus',
-    'Slash',
-    'Asterisk',
-    'Plus',
+    'NumpadEnter',
+    OPERATION_ACTIONS.EQUAL_OPERATION,
   ]
+
+  const allowedOperators: string[] = [
+    OPERATION_ACTIONS.ADD_OPERATION,
+    OPERATION_ACTIONS.SUBTRACT_OPERATION,
+    OPERATION_ACTIONS.MULTIPLY_OPERATION,
+    OPERATION_ACTIONS.DIVIDE_OPERATION,
+    OPERATION_ACTIONS.EXPONENT_OPERATION,
+  ]
+
   document.addEventListener('keydown', (event: KeyboardEvent) => {
-    if (allowedActions.includes(event.code)) {
-      console.log(event.key, event.code)
+    event.preventDefault()
+    switch (true) {
+      case onlyDigits(event.key):
+        calculator.appendDigit(event.key)
+        break
+
+      case allowedActions.includes(event.code):
+        if (event.code === 'Delete') calculator.clear()
+        if (event.code === 'Backspace') calculator.delete()
+        break
+
+      case equalOperators.includes(event.key):
+        calculator.equals()
+        break
+
+      case allowedOperators.includes(event.key):
+        const operation = selectOperator(event.key)
+        if (!operation) return
+
+        calculator.appendOperator(operation.action)
+        break
+
+      default:
+        break
     }
   })
 }
