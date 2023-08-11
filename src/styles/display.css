@@ -1,11 +1,12 @@
 .display-container {
   width: 290px;
-  min-height: 150px;
+  height: 180px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
   padding: 1rem;
+  overflow: hidden;
 }
 
 .display-history-container {
@@ -26,13 +27,22 @@
   align-items: center;
 }
 
-.display-history-value {
+.display-current-operand {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--stone);
+}
+
+.display-current-operand_result {
+  font-size: 3rem;
+  font-weight: 700;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .display-result-container {
   font-size: 3rem;
   font-weight: 700;
+  text-align: right;
 }

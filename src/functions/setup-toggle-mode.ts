@@ -1,4 +1,4 @@
-import { MODE } from '../config/consts'
+import { MODE } from '../types/app-types'
 
 export function setupToggleMode(toggles: NodeListOf<Element>) {
   toggles.forEach((button) => {
