@@ -1,5 +1,5 @@
-import { MODE } from '../config/consts'
 import { moonHTML, sunHTML } from '../icons/icons'
+import { MODE } from '../types/app-types'
 
 export const modeToggleHTML = `
 <div class="toggle-container">
