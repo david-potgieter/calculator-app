@@ -6,6 +6,3 @@ export const displayHTML = `
 <div data-result class="display-result-container"></div>
 </div>
 `
-
-// ''
-// ''
