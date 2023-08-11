@@ -26,12 +26,4 @@ describe('Calculator method: clear()', () => {
     expect(mockOperandEl).toMatchObject({ innerText: '' })
     expect(mockResultEl).toMatchObject({ innerText: '0' })
   })
-
-  // test('resets all calculator values to their initial state when the clear method is invoked', () => {
-  //   calculator.currentOperand = ''
-  //   calculator.result = '0'
-  //   calculator.clear()
-  //   expect(calculator.currentOperand).toBe('')
-  //   expect(calculator.result).toBe('0')
-  // })
 })
