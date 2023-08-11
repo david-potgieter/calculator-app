@@ -2,6 +2,8 @@
 
 A simple calculator app built with vanilla JS, CSS and HTML. Follows PEMDAS with the Parentheses functionality still to be added.
 
+<img src="https://github.com/david-potgieter/calculator-app/assets/2729962/4a71f177-2fc1-47d2-906f-fec04db160fb" width="500" />
+
 ## Dependencies
 
 - **Vite**: A build tool that aims to provide a faster and leaner development experience for modern web projects. It serves your code via native ES modules, leading to faster page loads in development.
