@@ -4,5 +4,5 @@ export function cleanupAndFlatten(operands: Operand[]) {
   return operands
     .map((item) => item.value)
     .join('')
-    .replace(/(\d\.\d*)\./g, '$1')
+    .replace(/(\d*\.?)(\d*)\.*(\d*)/g, '$1$2$3')
 }
